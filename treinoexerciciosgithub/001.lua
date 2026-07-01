@@ -1,0 +1,9 @@
+--[[
+Faça um Programa que peça um número e então mostre a mensagem O número
+informado foi [número]. 
+--]]
+
+print("Digite um numero: ")
+local numero = tonumber(io.read())
+
+print("O numero informado foi: " .. numero)
