@@ -39,19 +39,23 @@ function M.calcularMedia3NComResposta(n1, n2, n3)
 end
 
 
-function calcularAumentoSalarial(salario)
+function M.calcularAumentoSalarial(salario)
     if salario <= 280 then
+        print("Salário anterior: " .. salario)
         salario = salario + (salario * 0.2)
-        return salario .. "20%"
+        return "Novo salário: " .. salario .. "\nVocê teve um aumento de 20%"
     elseif salario > 280 and salario <= 700 then
+        print("Salário anterior: " .. salario)
         salario = salario + (salario * 0.15)
-        return salario .. "15%"
+        return "Novo salário: " .. salario .. "\nVocê teve um aumento de 15%"
     elseif salario > 700 and salario <= 1500 then
+        print("Salário anterior: " .. salario)
         salario = salario + (salario * 0.1)
-        return salario .. "10%"
+        return "Novo salário: " .. salario .. "\nVocê teve um aumento de 10%"
     else
+        print("Salário anterior: " .. salario)
         salario = salario + (salario * 0.05)
-        return salario .. "5%"
+        return "Novo salário: " .. salario .. "\nVocê teve um aumento de 5%"
     end
 end
 
