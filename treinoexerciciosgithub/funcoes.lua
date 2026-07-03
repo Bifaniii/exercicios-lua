@@ -59,7 +59,36 @@ function M.calcularAumentoSalarial(salario)
     end
 end
 
+function M.diaDaSemana(num)
+    if num==1 then
+        return "Domingo"
+    elseif num==2 then
+        return "Segunda-feira"
+    elseif num==3 then
+        return "Terça-feira"
+    elseif num==4 then
+        return "Quarta-feira"
+    elseif num==5 then
+        return "Quinta-feira"
+    elseif num==6 then
+        return "Sexta-feira"
+    elseif num==7 then
+        return "Sábado"
+    else
+        return "Erro, número inválido!"
+    end
+end
 
+function M.delta(a,b,c)
+    d = (b^2) - 4 * a * c
+    return d    
+end
+
+function M.calcualar_x_eq_segundo_grau(a,b, delta)
+    x1 = (-b + (math.sqrt(delta)))/2*a
+    x2 = (-b - (math.sqrt(delta)))/2*a
+    return "X1: " .. x1 .. "\nX2: " .. x2
+end
 
 
 
