@@ -90,6 +90,39 @@ function M.calcualar_x_eq_segundo_grau(a,b, delta)
     return "X1: " .. x1 .. "\nX2: " .. x2
 end
 
+function M.calculadora(n1, n2, operacao) 
+    if operacao == '+' then
+        Resultado = n1 + n2
+    elseif operacao == '-' then
+        Resultado = n1 - n2
+    elseif operacao == '*' then
+        Resultado = n1 * n2
+    elseif operacao == '/' then
+        Resultado = n1 / n2
+    else
+        print("Operação inválida!")
+    end
 
+    if Resultado then
+
+        if Resultado % 2 == 0 then
+            print("O resultado é igual a " .. Resultado .. " e é um número par")
+        else
+            print("O resultado é igual a " .. Resultado .. " e é um número impar")
+        end
+
+        if Resultado >= 0 then
+            print("O número " .. Resultado .. " é positivo")
+        else
+            print("O número " .. Resultado .. " é negativo")
+        end
+
+        if Resultado % 1 == 0 then
+            print("O resultado é um número inteiro!")
+        else
+            print("O resultado é um número decimal")
+        end
+    end
+end
 
 return M
