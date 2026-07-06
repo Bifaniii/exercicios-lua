@@ -125,4 +125,41 @@ function M.calculadora(n1, n2, operacao)
     end
 end
 
+function M.suspeito(telefone, esteve, mora, devia, trabalhou)
+    local pontuacao = 0
+
+    if telefone == "SIM" then
+        pontuacao = pontuacao + 1
+    end
+
+    if esteve == "SIM" then
+        pontuacao = pontuacao + 1
+    end
+
+    if mora == "SIM" then
+        pontuacao = pontuacao + 1
+    end
+
+    if devia == "SIM" then
+        pontuacao = pontuacao + 1
+    end
+
+    if trabalhou == "SIM" then
+        pontuacao = pontuacao + 1
+    end
+
+    if pontuacao == 1 then
+        print("Inocente!")
+    elseif pontuacao == 2 then
+        print("Suspeita!")
+    elseif pontuacao == 3 or pontuacao == 4 then
+        print("Cúmplice!")
+    elseif pontuacao == 5 then
+        print("Assassino!")
+    else
+        print("Erro!")
+    end
+    
+end
+
 return M
