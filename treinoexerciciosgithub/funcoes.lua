@@ -162,4 +162,46 @@ function M.suspeito(telefone, esteve, mora, devia, trabalhou)
     
 end
 
+function M.calcularCombustivel(litros, tipo)
+    local precoGasolina = 2.5 * litros
+    local precoAlcool = 1.9 * litros
+
+    local pagar = 0
+
+    if tipo == 'A' then
+        if litros <= 20 then
+            pagar = precoGasolina - (precoGasolina * 0.03)
+        else
+            pagar = precoGasolina - (precoGasolina * 0.05)
+        end
+    elseif tipo == 'G' then
+        if litros <= 20 then
+            pagar = precoAlcool - (precoAlcool * 0.04)
+        else
+            pagar = precoAlcool - (precoAlcool * 0.06)
+        end
+    end
+
+    return pagar
+end
+
+function M.calcularFrutas(morango, maca)
+    local pagarMorango = 0
+    local pagarMaca = 0
+
+    if morango <= 5 then
+        pagarMorango = 2.5 * morango
+    else
+        pagarMorango = 1.8 * morango
+    end
+
+    if maca <= 5 then
+        pagarMaca = 2.2 * maca
+    else
+        pagarMaca = 1.5 * maca
+    end
+    
+    return pagarMaca + pagarMorango
+    
+end
 return M
