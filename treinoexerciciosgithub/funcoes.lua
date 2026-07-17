@@ -202,6 +202,7 @@ function M.calcularFrutas(morango, maca)
     end
     
     return pagarMaca + pagarMorango
-    
 end
+
+
 return M
