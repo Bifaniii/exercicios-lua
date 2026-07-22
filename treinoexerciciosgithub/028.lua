@@ -6,9 +6,12 @@ Faça um programa que leia e valide as seguintes informações:
     Sexo: 'f' ou 'm';
     Estado Civil: 's', 'c', 'v', 'd';
 --]]
+
+local nome, idade, salario, sexo, ec
+
 while true do
     print("Digite seu nome: ")
-    local nome = io.read()
+    nome = io.read()
 
     if string.len(nome) < 3 then
         print("Inválido! Nome precisa conter pelo menos 3 caracteres")
@@ -19,7 +22,7 @@ end
 
 while true do
     print("Digite sua idade: ")
-    local idade = tonumber(io.read())
+    idade = tonumber(io.read())
 
     if idade < 0 or idade > 150 then
         print("Idade inválida! Idade deve estar entre 0 e 150 anos")
@@ -30,7 +33,7 @@ end
 
 while true do
    print("Digite seu salário: ")
-   local salario = tonumber(io.read())
+   salario = tonumber(io.read())
 
    if salario < 0 then
         print("Salário inválido! Salário deve ser maior que 0")
@@ -41,7 +44,7 @@ end
 
 while true do
    print("Digite seu sexo: ")
-   local sexo = io.read():lower()
+   sexo = io.read():lower()
 
    if sexo ~= 'm' and sexo ~= 'f' then
         print("Sexo inválido! Digite 'M' para masculino ou 'F' para feminino")
@@ -56,7 +59,7 @@ end
 
 while true do
    print("Digite seu estado civil: 's' - Solteiro(a), 'c' - casado(a), 'v' - viúvo(a), 'd' - divorciado(a)")
-   local ec = io.read():lower()
+   ec = io.read():lower()
    
    if ec == 's' then
         ec = 'solteiro(a)'
@@ -78,7 +81,9 @@ end
 local mensagem = string.format([[
     Seu nome é %s.
     Você possui %d anos.
-    Você recebe R$ $d por mẽs.
+    Você recebe R$ %d por mẽs.
     Você é do sexo %s.
-    Seu estado civil é %s 
+    Seu estado civil é %s. 
 ]], nome, idade, salario, sexo, ec )
+
+print(mensagem)
